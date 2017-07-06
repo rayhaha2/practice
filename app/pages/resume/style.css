@@ -1,0 +1,379 @@
+/*regular css*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+p {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+ul {
+    margin: 0;
+}
+
+.list > li {
+    list-style: disc;
+    margin-left: 1.3em;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: 
+
+}
+/*通用设置*/
+body {
+    background-image: url(../../image/bg.png);
+    font-family: Arial, "微软雅黑", Helvetica, sans-serif;
+}
+
+.wrapper {
+    max-width: 980px;
+    margin:0 auto;
+    margin-top: 15px;
+    background: url(../../image/line.png) 0 -18px no-repeat;
+}
+
+.section-a {
+    margin: 270px 0;
+}
+
+.section-a:nth-child(even) {
+    background: rgba(0,0,0,0.02);
+}
+.head-wrapper h2 {
+    font-size: 25px;
+    font-weight: 900;
+    padding: 10px;
+    margin: 0 0 30px 0;
+}
+
+/*内容显示*/
+@media (max-width: 749px) {
+    .wrapper { margin: 0 20px; clear: both; }
+}
+@media (min-width: 750px) {
+    .wrapper { max-width: 980px; margin: 0 auto; clear: both; }
+}
+@media (min-width: 750px) and (max-width: 1040px) {
+    .wrapper { max-width: auto; margin: 0 30px; }
+}
+/* 清浮动 */
+.clear { clear: both; height: 0; overflow: hidden; }
+.clearfix:after {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    content: '.';
+}
+/*个人简介*/
+.title>h2 {
+    font-size: 25px;
+    font-weight: 900;
+    margin: 0px 0 30px 300px;
+    padding: 10px;
+}
+
+.intro {
+    width: 800px;
+    margin: 0 auto 50px auto; 
+}
+
+.intro-list{
+    width: 300px;
+    float: left;
+}
+
+.intro-list li{
+    padding: 5px;
+}
+
+.intro-list li span{
+    display: inline-block;
+    text-align: right;
+    width: 70px;
+}
+
+.intro-me{
+    width: 500px;
+    float: left;
+}
+
+.intro-me p{
+    margin: 0 0 10px 50px;
+    line-height:26px;
+}
+
+/*content*/
+/*专业技能*/
+.skill-item {
+    position: relative;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+.skill-item-html {
+    -webkit-animation-name: bar-html;
+    animation-name: html;
+}
+@-webkit-keyframes bar-html {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+@keyframes bar-html {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+.skill-item-css {
+    width: 100%;
+    -webkit-animation-name: bar-css;
+    animation-name: css;
+}
+@-webkit-keyframes bar-css {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+@keyframes bar-css {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+.skill-item-javascript {
+    width: 100%;
+    -webkit-animation-name: bar-javascript;
+    animation-name: javascript;
+}
+@-webkit-keyframes bar-javascript {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+@keyframes bar-javascript {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+.skill-item-react {
+    width: 75%;
+    -webkit-animation-name: bar-react;
+    animation-name: react;
+}
+@-webkit-keyframes bar-react {
+    0% { width: 0; }
+    100% { width: 75%; }
+}
+@keyframes bar-react {
+    0% { width: 0; }
+    100% { width: 75%; }
+}
+.skill-item-name {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    overflow: hidden;
+    border-left: 3px solid;
+}
+
+.skill-item-mastered .skill-item-name {
+    color: #2a7da9;
+    background-color: #BED8E8;
+    border-color: #3498db;
+}
+
+.skill-item-detail {
+    position: absolute;
+    left: 150px;
+    top: 12px;
+    z-index: 9999;
+    max-width: 350px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    display: none;
+}
+
+/*hover 效果*/
+@media (max-width: 749px) {
+    .skill-item {margin-bottom: 15px; }
+}
+
+@media (min-width: 750px) {
+    .skill-item { margin-bottom: 20px; }
+    .skill-item:hover .skill-item-detail {
+        display: block;
+        font-size: 0.875em;
+    }
+
+    .fade { -webkit-animation: fadeIn 0.8s; animation: fadeIn 0.8s; }
+    @-webkit-keyframes fadeIn {
+        0% { display: none; opacity: 0; }
+        1% { display: block; opacity: 0; }
+        100% { display: block; opacity: 1; }
+    }
+    @keyframes fadeIn {
+        0% { display: none; opacity: 0; }
+        1% { display: block; opacity: 0; }
+        100% { display: block; opacity: 1; }
+    }
+} 
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+/*工作经验*/
+.work-exp-list {
+    border-left: 4px solid #ccc;
+    padding: 1px 0;
+    margin-left: 8px;
+}
+
+.work-exp-list-point {
+    position: relative;
+    padding-left: 18px;
+    margin: 8px 0;
+    height: 26px;
+    line-height: 22px;
+}
+
+.work-exp-list-point-ico {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #fff;
+    border-radius: 28px;
+    background: #3498db;
+    position: absolute;
+    left: -11px;
+    top: 0;
+}
+
+.work-exp-company {
+    margin-left: 140px;
+    font-family: 'Pingfang SC', 'Lantinghei SC', 'Helvetica Neue', Helvetica, sans-serif;
+    letter-spacing: 1.5px;
+}
+
+.work-exp-company-title a {
+    color: #fb7c6b;
+    text-decoration: none;
+    display: inline-block;   
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 20px;
+    float: left;
+}
+
+.work-exp-company-jobtitle {
+    float: left;
+    font-size: 18px;
+    color: #888;
+}
+
+.work-exp-company-body {
+    clear: both;
+}
+
+.work-exp-company-jobtitle .work-exp-company-title{
+    display: inline-block;
+}
+
+.work-exp-company-jobtitle:before {
+    content: '\2014\2014';
+    padding-right: 4px;
+} 
+/*hover效果*/
+.work-list {
+    position: relative;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+
+.work-item {
+    height: 30px;
+    line-height: 40px;
+    padding-left: 5px;
+    overflow: hidden;
+    font-weight: normal;
+    font-family: 'Pingfang SC', 'Lantinghei SC', 'Helvetica Neue', Helvetica, sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+}   
+
+.work-item-detail {
+    position: absolute;
+    left: 150px;
+    top: 12px;
+    z-index: 9999;
+    max-width: 560px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    display: none;
+}
+
+@media (max-width: 749px) {
+
+}
+
+@media (min-width: 750px) {
+    .work-list:hover .work-item-detail {
+        display: block;
+        font-size: 0.875em;
+    }
+}
+
+/*项目经验*/
+.tag-list {
+    line-height: 20px;
+    margin: 5px 0;
+}
+
+.tag-item {
+    padding: 1px 6px;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Lucida Grande', arial;
+    margin: 0 3px;
+}
+
+.tag-item-html {
+    background: #f60;
+}
+
+.tag-item-css{
+    background: #f90;
+}
+
+.tag-item-javascript {
+    background: #f0db4f;
+    color: #333!important;
+}
+
+.tag-item-jquery {
+    background: #80bd01;
+}
+
+.img-section img {
+    width: 90%;
+}
