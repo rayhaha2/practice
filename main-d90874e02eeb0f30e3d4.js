@@ -14438,7 +14438,7 @@ var App = function (_Component) {
         'div',
         null,
         _react2.default.createElement(_Picker2.default, { value: selectedReddit,
-          onChange: this.handleChange,
+          onChange: this.handleChange.bind(this),
           options: ['reactjs', 'frontend', "123"] }),
         _react2.default.createElement(
           'p',
@@ -14454,7 +14454,7 @@ var App = function (_Component) {
           !isFetching && _react2.default.createElement(
             'a',
             { href: '#',
-              onClick: this.handleRefreshClick },
+              onClick: this.handleRefreshClick.bind(this) },
             'Refresh'
           )
         ),
